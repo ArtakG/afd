@@ -1,13 +1,10 @@
 module "afd" {
-  source          = ".\\module"
-  location        = "westeurope"
-  location-prefix = "weu"
-  name            = "frontdoortestag"
-  custom-domain   = "learnit.solutions"
-  allowed_ips     = ["46.241.153.142"]
-  tags = {
-    environment = "test"
-    owner       = "terraform"
-    createdBy   = "agabrielyan"
-  }
+  source                         = ".\\module"
+  location                       = var.location
+  location-prefix                = var.location-prefix
+  name                           = var.name
+  custom-domain                  = var.custom-domain
+  allowed_ips                    = var.allowed_ips
+  storage-account-container-name = var.storage-account-container-name
+  tags                           = var.tags
 }
