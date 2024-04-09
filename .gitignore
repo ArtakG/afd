@@ -8,6 +8,7 @@
 
 # .tfstate files
 *.tfstate
+*.hcl
 *.tfstate.*
 
 # Crash log files
