@@ -56,7 +56,7 @@ resource "azurerm_cdn_frontdoor_origin" "this" {
   enabled                        = true
 
   private_link {
-    location               = var.location
+    location               = azurerm_resource_group.this.location
     private_link_target_id = azurerm_storage_account.this.id
     request_message        = "The request is from terraform"
     target_type            = "blob"
