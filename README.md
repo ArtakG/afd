@@ -1,9 +1,10 @@
 <!-- BEGIN_TF_DOCS -->
-## Gerenal description
+## General description
 
-I successfully set up the architecture to securely serve content from a private container within an Azure Storage Account via Azure Front Door, (optionally) utilizing a custom domain name. This involved configuring the necessary components to ensure seamless and secure access to the content while maintaining high availability and scalability. Please note that 2 steps are not automated 
-    1. Azure Storage Account private endpoint connections approve it is not supported via Terraform, it should be implement via az cli
-    2. Custom domain verification is not implemented as it does not provided and verification is depends on DNS provider 
+I have completed the setup to securely serve content from a private container within an Azure Storage Account via Azure Front Door. Optionally, I configured it to utilize a custom domain name. While the majority of the setup is automated, it's important to note that two steps require manual intervention:
+
+    1. Approving Azure Storage Account private endpoint connections: This step is not supported via Terraform and must be implemented using the Azure CLI.
+    2. Custom domain verification: This step is not implemented as the verification process relies on information provided by the DNS provider and cannot be automated.
 
 ## After terraform apply
 1. Az login and run terraform apply
