@@ -1,11 +1,11 @@
 variable "location" {
   description = "value of Azure datacenter the location"
   type        = string
-  default     = "west us"
+  default     = "West US 3"
 }
 
 variable "location-prefix" {
-  default     = "wus"
+  default     = "wsu3"
   description = "The location prefix to use for the resource group and CDN Front Door profile names."
   type        = string
 }
@@ -26,12 +26,6 @@ variable "custom-domain" {
   description = "The custom domain to use for the CDN Front Door profile."
   type        = string
   default     = "learnit.solutions"
-}
-
-variable "allowed_ips" {
-  description = "The list of IP addresses that are allowed to access the storage account."
-  type        = list(string)
-  default     = ["46.241.153.142"]
 }
 
 variable "tags" {
